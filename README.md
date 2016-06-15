@@ -1,4 +1,4 @@
-# split-download-file-python
+# split-download-python
 The code shows the way of how we can download a file by splitting the data into small chunks using python 
 
 The basic trick or concept is that  we send a header request for the size of the file and then split the bits equally on
