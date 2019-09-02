@@ -4,12 +4,12 @@ The code shows the way of how we can download a file by splitting the data into 
 The basic trick or concept is that  we send a header request for the size of the file and then split the bits equally on
 some criteria (i.e no of splits).
 
-###How to get the length of the data that we are downloading###
+### How to get the length of the data that we are downloading###
 so the header is `requests.head(url, headers={'Accept-Encoding': 'identity'}).headers.get('content-length', None)`
 
 so if will return the content length of the data in bytes now we can easily divide it into equal portions
 
-###How to send how much we are going to download###
+### How to send how much we are going to download###
 then we request the data using `req.headers['Range'] = 'bytes={}'.format(irange)` where `irange` is the split in the number of
 the we would like to start from and end to 
 
